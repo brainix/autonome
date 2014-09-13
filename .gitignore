@@ -52,3 +52,9 @@ docs/_build/
 
 # PyBuilder
 target/
+
+
+
+# Raj's additions
+.env
+little-wiki/
