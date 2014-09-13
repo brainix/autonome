@@ -19,6 +19,7 @@ from app import app
 @app.route('/sms', methods=['POST'])
 def sms():
     title = request.form.get('Body')
+    wikipedia.set_lang('simple')
     summary = wikipedia.summary(title, sentences=2, chars=140)
     response = twiml.Response()
     response.message(summary)
