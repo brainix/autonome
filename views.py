@@ -16,7 +16,7 @@ from app import app
 
 
 
-@app.route('/sms')
+@app.route('/sms', methods=['POST'])
 def sms():
     title = request.form.get('Body')
     summary = wikipedia.summary(title, sentences=2, chars=140)
