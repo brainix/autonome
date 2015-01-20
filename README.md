@@ -1,4 +1,4 @@
 little-wiki
 ===========
 
-Wikipedia over SMS
+Wikipedia over SMS.
