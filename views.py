@@ -22,6 +22,7 @@ def sms():
     to = request.form.get('From')
     command = request.form.get('Body')
 
+    body = 'Text STATUS to get the status of your car, UNSUBSCRIBE to receive no further SMSes, or SUBSCRUBE to re-subscribe to future SMSes.'
     if command == 'STATUS':
         bodies = [
             'Your car is NEXT IN LINE and will be ready for pick up in 2 HOURS.',
@@ -32,8 +33,6 @@ def sms():
             'Your car is READY FOR PICK UP NOW.'
         ]
         body = random.choice(body)
-    else:
-        body = 'Text STATUS to get the status of your car, UNSUBSCRIBE to receive no further SMSes, or SUBSCRUBE to re-subscribe to future SMSes.'
 
     account_sid = os.environ['TWILIO_ACCOUNT_SID']
     auth_token = os.environ['TWILIO_AUTH_TOKEN']
