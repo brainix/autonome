@@ -30,9 +30,9 @@ def sms():
             'Your car is GETTING ITS FILTER CHANGED and will be ready for pick up in 1 HOUR.',
             'Your car is GOING THROUGH A 128 POINT INSPECTION and will be ready for pick up in 30 MINUTES.',
             'Your car is BEING DETAILED and will be ready for pick up in 15 MINUTES.',
-            'Your car is READY FOR PICK UP NOW.'
+            'Your car is READY FOR PICK UP NOW.',
         ]
-        body = random.choice(body)
+        body = random.choice(bodies)
 
     account_sid = os.environ['TWILIO_ACCOUNT_SID']
     auth_token = os.environ['TWILIO_AUTH_TOKEN']
